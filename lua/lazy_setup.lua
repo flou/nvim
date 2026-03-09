@@ -19,6 +19,9 @@ require("lazy").setup({
   ui = { backdrop = 100 },
   performance = {
     rtp = {
+      paths = (vim.env.GHOSTTY_RESOURCES_DIR ~= nil) and {
+        vim.fs.normalize(vim.env.GHOSTTY_RESOURCES_DIR .. "/../nvim/site"),
+      } or {},
       -- disable some rtp plugins, add more to your liking
       disabled_plugins = {
         -- "gzip",
