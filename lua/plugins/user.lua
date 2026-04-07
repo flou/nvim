@@ -6,13 +6,12 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("lspconfig").gopls.setup {
+      vim.lsp.enable('gopls')
+      vim.lsp.config('gopls', {
         settings = {
-          gopls = {
-            gofumpt = true,
-          },
-        },
-      }
+          gopls = { gofumpt = true }
+        }
+      })
     end,
   },
   {
