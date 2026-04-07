@@ -1,7 +1,7 @@
 require("lazy").setup({
   {
     "AstroNvim/AstroNvim",
-    version = "^4",                -- Remove version tracking to elect for nighly AstroNvim
+    version = "^6",                -- Remove version tracking to elect for nighly AstroNvim
     import = "astronvim.plugins",
     opts = {                       -- AstroNvim options must be set here with the `import` key
       mapleader = " ",             -- This ensures the leader key must be configured before Lazy is set up
@@ -24,25 +24,20 @@ require("lazy").setup({
       } or {},
       -- disable some rtp plugins, add more to your liking
       disabled_plugins = {
-        -- "gzip",
-        -- "netrwPlugin",
-        -- "tarPlugin",
-        -- "tohtml",
-        -- "zipPlugin",
         "2html_plugin",
         "getscript",
         "getscriptPlugin",
         "gzip",
         "logipat",
+        "matchit",
         "netrw",
+        "netrwFileHandlers",
         "netrwPlugin",
         "netrwSettings",
-        "netrwFileHandlers",
-        "matchit",
-        "tar",
-        "tarPlugin",
         "rrhelper",
         "spellfile_plugin",
+        "tar",
+        "tarPlugin",
         "vimball",
         "vimballPlugin",
         "zip",

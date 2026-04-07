@@ -33,11 +33,15 @@ return {
     end,
   },
   {
-    "goolord/alpha-nvim",
-    opts = function(_, opts)
-      opts.section.header.val = {}
-      return opts
-    end,
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        sections = {
+          { section = "keys",   gap = 1, padding = 4 },
+          { section = "startup" },
+        }
+      }
+    }
   },
 
   -- You can disable default plugins as follows:
